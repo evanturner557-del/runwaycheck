@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; form-action 'self' mailto:; base-uri 'self'; frame-ancestors 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>RunwayCheck — free cash runway calculator for UK founders</title>
   <meta name="description" content="How many months can your business keep going? A free, calm cash-runway calculator for UK freelancers and small company directors. Nothing is saved.">
   <meta name="theme-color" content="#0F3D3E">
@@ -11,16 +13,18 @@
   <meta property="og:description" content="How many months can your business keep going? A free, calm cash-runway calculator for UK freelancers and small company directors. Nothing is saved.">
   <meta property="og:image" content="https://evanturner557-del.github.io/runwaycheck/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://evanturner557-del.github.io/runwaycheck/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="_shared/fonts/source-serif-4-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="_shared/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="_shared/kit.css">
+  <link rel="stylesheet" href="assets/site.css">
   <script src="assets/config.js"></script>
   <script src="assets/analytics.js" defer></script>
   <script src="_shared/kit.js" defer></script>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<svg width="0" height="0" aria-hidden="true" focusable="false" class="x-s5">
   <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z" fill="currentColor"/></symbol>
@@ -37,16 +41,15 @@
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
 </svg>
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="paused-banner" role="status">RunwayCheck is paused for now. Nothing is on sale and no payments are taken.</div>
 <div class="announce" role="region" aria-label="Site notice"><div class="container"><span class="dot" aria-hidden="true"></span><span><strong>Launching soon.</strong> We’re preparing our first release — nothing is on sale yet and no payments are taken.</span></div></div>
 <header class="site-header">
   <div class="container">
     <a class="brand" href="./"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0F3D3E"/><text x="30" y="45" text-anchor="middle" font-family="Source Serif 4, Georgia, serif" font-weight="700" font-size="38" fill="#F7F5F2">R</text><circle cx="49" cy="42" r="5.5" fill="#2A9D8F"/></svg>RunwayCheck</a>
     <nav class="nav" aria-label="Primary"><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
-    <a class="btn btn--primary btn--sm header-cta" href="#pricing" data-cta="header">Work out my runway</a>
+    <a class="btn btn--primary btn--sm header-cta" href="#top-tool" data-cta="header">Work out my runway</a>
     <button class="nav-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
   </div>
-  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile"><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a class="btn btn--primary" href="#pricing" data-cta="mobile-nav">Work out my runway</a></nav>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile"><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a class="btn btn--primary" href="#top-tool" data-cta="mobile-nav">Work out my runway</a></nav>
 </header>
 <main id="main">
   <section class="hero">
@@ -61,7 +64,7 @@
         </div>
         <ul class="assurances"><li><svg aria-hidden="true"><use href="#i-check"/></svg>Free, no sign-up</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Nothing saved or sent</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>No judgement</li></ul>
       </div>
-      <figure class="mock" style="margin:0" id="top-tool" aria-label="Cash runway calculator">
+      <figure class="mock x-s6" id="top-tool" aria-label="Cash runway calculator">
         <form class="calc" data-runway>
           <div class="field"><label for="r-cash">Cash in the bank now (£)</label><input id="r-cash" name="cash" inputmode="decimal" placeholder="e.g. 12,000"></div>
           <div class="field"><label for="r-in">Money in per month (£)</label><input id="r-in" name="income" inputmode="decimal" placeholder="e.g. 3,500"></div>
@@ -83,7 +86,7 @@
     <div class="container">
       <div class="section-head"><span class="eyebrow">How it works</span><h2>Three numbers. One clear answer.</h2><p>Use the calculator on your own, or book a session if you&#x27;d like help building a plan.</p></div>
       <div class="steps"><div class="step"><span class="step__n">01</span><h3>Enter three numbers</h3><p>Cash you have now, what comes in each month, and what goes out.</p></div><div class="step"><span class="step__n">02</span><h3>See your runway</h3><p>Months until the money runs out at today&#x27;s pace — or confirmation that you&#x27;re cash-positive.</p></div><div class="step"><span class="step__n">03</span><h3>Make a plan (optional)</h3><p>In a 45-minute session we build a simple 13-week cash sheet with you.</p></div></div>
-      <div class="grid grid--3" style="margin-top:1.25rem"><div class="card"><div class="icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></div><h3>Private by design</h3><p>The calculator runs in your browser. We never see your figures.</p></div><div class="card"><div class="icon"><svg aria-hidden="true"><use href="#i-clock"/></svg></div><h3>13-week cash sheet</h3><p>The session leaves you with a simple spreadsheet you can keep updating.</p></div><div class="card"><div class="icon"><svg aria-hidden="true"><use href="#i-check"/></svg></div><h3>Plain English</h3><p>No jargon, no shame, no upsell pressure.</p></div></div>
+      <div class="grid grid--3 x-s7"><div class="card"><div class="icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></div><h3>Private by design</h3><p>The calculator runs in your browser. We never see your figures.</p></div><div class="card"><div class="icon"><svg aria-hidden="true"><use href="#i-clock"/></svg></div><h3>13-week cash sheet</h3><p>The session leaves you with a simple spreadsheet you can keep updating.</p></div><div class="card"><div class="icon"><svg aria-hidden="true"><use href="#i-check"/></svg></div><h3>Plain English</h3><p>No jargon, no shame, no upsell pressure.</p></div></div>
     </div>
   </section>
   <section class="section section--tint" id="pricing">
@@ -107,8 +110,8 @@
     <div class="container contact-grid">
       <div>
         <span class="eyebrow">Contact</span>
-        <h2 style="font-size:clamp(1.75rem,3.6vw,2.5rem)">Ask about a cash session</h2>
-        <p style="color:var(--muted);margin-top:.9rem">Tell us a little about your situation and we&#x27;ll suggest a time.</p>
+        <h2 class="x-s8">Ask about a cash session</h2>
+        <p class="x-s9">Tell us a little about your situation and we&#x27;ll suggest a time.</p>
         <ul class="contact-points"><li><span class="icon" aria-hidden="true"><svg><use href="#i-mail"/></svg></span><span><b>Email</b>Email us at <a href="mailto:localreply@agentmail.to?subject=RunwayCheck%20enquiry">localreply@agentmail.to</a>. Please put “RunwayCheck” in the subject line — this inbox is shared by a few small businesses run by the same owner.</span></li>
           <li><span class="icon" aria-hidden="true"><svg><use href="#i-shield"/></svg></span><span><b>Your data</b>Used only to answer you. See our <a href="privacy.html">privacy notice</a>.</span></li></ul>
       </div>
@@ -136,7 +139,7 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div><a class="brand" href="./"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0F3D3E"/><text x="30" y="45" text-anchor="middle" font-family="Source Serif 4, Georgia, serif" font-weight="700" font-size="38" fill="#F7F5F2">R</text><circle cx="49" cy="42" r="5.5" fill="#2A9D8F"/></svg>RunwayCheck</a><p style="margin-top:.75rem;max-width:22rem">A free, private cash runway calculator for UK freelancers and small company directors, with optional planning sessions.</p></div>
+      <div><a class="brand" href="./"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0F3D3E"/><text x="30" y="45" text-anchor="middle" font-family="Source Serif 4, Georgia, serif" font-weight="700" font-size="38" fill="#F7F5F2">R</text><circle cx="49" cy="42" r="5.5" fill="#2A9D8F"/></svg>RunwayCheck</a><p class="x-s10">A free, private cash runway calculator for UK freelancers and small company directors, with optional planning sessions.</p></div>
       <div><h2>Product</h2><ul><li><a href="#how">How it works</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul></div>
       <div><h2>Company</h2><ul><li><a href="#contact">Contact</a></li><li><a href="privacy.html">Privacy notice</a></li><li><a href="terms.html">Terms</a></li></ul></div>
     </div>
