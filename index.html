@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self' https://formsubmit.co; form-action 'self'; base-uri 'self'; object-src 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>RunwayCheck — free cash runway calculator for UK founders</title>
   <meta name="description" content="How many months can your business keep going? A free, calm cash-runway calculator for UK freelancers and small company directors. Nothing is saved.">
@@ -116,7 +116,7 @@
         <ul class="contact-points"><li><span class="icon" aria-hidden="true"><svg><use href="#i-mail"/></svg></span><span><b>Email</b>Email us at <a href="mailto:localreply+runwaycheck@agentmail.to?subject=RunwayCheck%20enquiry">localreply+runwaycheck@agentmail.to</a>. This is a plus-address on our shared business inbox, used only for RunwayCheck (same owner as our other small brands).</span></li>
           <li><span class="icon" aria-hidden="true"><svg><use href="#i-shield"/></svg></span><span><b>Your data</b>Used only to deal with your enquiry. See our <a href="privacy.html">privacy notice</a>.</span></li></ul>
       </div>
-      <form class="form" data-contact data-email="localreply+runwaycheck@agentmail.to" data-subject="RunwayCheck enquiry" novalidate>
+      <form class="form" data-contact data-formsubmit="b58281a8651a92bc07236a2bfa36f28f" data-email="localreply+runwaycheck@agentmail.to" data-subject="RunwayCheck enquiry" novalidate>
         <div class="row-2">
           <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
           <div class="field"><label for="f-business">Business name</label><input id="f-business" name="business" autocomplete="organization" required></div>
@@ -126,8 +126,8 @@
           <div class="field"><label for="f-plan">Interested in</label><select id="f-plan" name="plan"><option value="">Not sure yet</option><option value="free">Calculator (£0)</option><option value="session">Cash session (£39)</option><option value="checkin">Monthly check-in (£29)</option></select></div>
         </div>
         <div class="field"><label for="f-message">Anything else?</label><textarea id="f-message" name="message"></textarea></div>
-        <p class="hint">Submitting opens your own email app with the message ready — nothing is sent until you press Send.</p>
-        <button class="btn btn--primary" type="submit">Write my email</button>
+        <p class="hint">Your message is sent to our inbox via FormSubmit (formsubmit.co), our form-delivery provider. If that fails, your own email app opens instead.</p>
+        <button class="btn btn--primary" type="submit">Send message</button>
         <p class="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
