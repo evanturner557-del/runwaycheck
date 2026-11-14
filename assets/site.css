@@ -11,3 +11,13 @@
 
 .footer-legal{margin:12px 0 0;font-size:.8125rem;line-height:1.5;opacity:.8}
 .footer-legal a{color:inherit}
+
+/* charcoal mark system (#2B2F33) */
+:root{
+  --ink:#2B2F33;
+  --ink-deep:#1A1D20;
+  --accent:#E76F51;
+  --accent-strong:#2B2F33;
+  --accent-soft:#E8E9EA;
+}
+.announce{background:#2B2F33;color:#F7F5F2}
